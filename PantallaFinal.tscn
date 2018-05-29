@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Node
+
+func _ready():
+	pass
+
+
+func _on_btnJugarDN_pressed():
+	get_tree().change_scene(\"res://MenuReciclaje.tscn\")
+"
+
+[node name="PantallaFinal" type="Node" index="0"]
+
+script = SubResource( 1 )
+
+[node name="btnJugarDN" type="Button" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_top = 96.0
+margin_right = 365.0
+margin_bottom = 116.0
+rect_scale = Vector2( 4, 4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "¿Quieres jugar de nuevo?"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect", "custom_colors" ]
+
+[node name="btnSalir" type="Button" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 448.0
+margin_top = 352.0
+margin_right = 487.0
+margin_bottom = 372.0
+rect_scale = Vector2( 4, 4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Salir"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect", "custom_colors" ]
+
+[connection signal="pressed" from="btnJugarDN" to="." method="_on_btnJugarDN_pressed"]
+
+
