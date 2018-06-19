@@ -1,11 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://PantallaJuego.gd" type="Script" id=1]
-[ext_resource path="res://Jugador.gd" type="Script" id=2]
-[ext_resource path="res://verde36_full.png" type="Texture" id=3]
-[ext_resource path="res://Timer.gd" type="Script" id=4]
-[ext_resource path="res://desechoVidrio.gd" type="Script" id=5]
-[ext_resource path="res://0061_600x.png" type="Texture" id=6]
+[ext_resource path="res://Jugador.gd" type="Script" id=1]
+[ext_resource path="res://verde36_full.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -18,15 +14,7 @@ custom_solver_bias = 0.0
 radius = 10.0
 height = 20.0
 
-[sub_resource type="CapsuleShape2D" id=3]
-
-custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
-
 [node name="PantallaJuego" type="Node" index="0"]
-
-script = ExtResource( 1 )
 
 [node name="PisoJuego" type="StaticBody2D" parent="." index="0"]
 
@@ -69,14 +57,13 @@ shape = SubResource( 1 )
 
 [node name="Jugador" type="KinematicBody2D" parent="." index="1"]
 
-position = Vector2( 768, 497.228 )
+position = Vector2( 768, 496 )
 scale = Vector2( 0.766129, 1.09375 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 2 )
-_sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Visibility", "Z Index", "collision" ]
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -90,39 +77,6 @@ shape = SubResource( 2 )
 [node name="Sprite" type="Sprite" parent="Jugador" index="1"]
 
 scale = Vector2( 0.431733, 0.348296 )
-texture = ExtResource( 3 )
-
-[node name="Timer" type="Timer" parent="." index="2"]
-
-process_mode = 1
-wait_time = 180.0
-one_shot = true
-autostart = true
-script = ExtResource( 4 )
-
-[node name="desechoVidrio" type="KinematicBody2D" parent="." index="3"]
-
-position = Vector2( 500.437, 105.076 )
-scale = Vector2( 1, 0.989192 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="desechoVidrio" index="0"]
-
-position = Vector2( -3.72864, 4.93663 )
-scale = Vector2( 1.57556, 3.37149 )
-shape = SubResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="desechoVidrio" index="1"]
-
-position = Vector2( -0.912811, -9.48483 )
-scale = Vector2( 0.437099, 0.43472 )
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 
 

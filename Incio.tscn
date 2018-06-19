@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://paisaje-de-primavera-de-dibujos-animados-de-fondo_399-2147490736.jpg" type="Texture" id=1]
 
 [sub_resource type="GDScript" id=1]
 
@@ -17,9 +19,10 @@ func _on_Reciclados_pressed():
 	get_tree().change_scene(\"res://Informacion.tscn\")
 "
 
-[node name="Incio" type="Node"]
+[node name="Incio" type="Node" index="0"]
 
 script = SubResource( 1 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="BotonInicio" type="Button" parent="." index="0"]
 
@@ -44,10 +47,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "PLAY"
+text = "Jugar"
 flat = false
 align = 1
-_sections_unfolded = [ "Rect", "custom_colors" ]
+_sections_unfolded = [ "Anchor", "Material", "Rect", "Theme", "Visibility", "custom_colors" ]
 
 [node name="Reciclados" type="Button" parent="." index="1"]
 
@@ -76,6 +79,26 @@ text = " Reciclados "
 flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_colors" ]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground" index="0"]
+
+position = Vector2( 524.882, 240.82 )
+scale = Vector2( 2.22185, 1.56229 )
+texture = ExtResource( 1 )
 
 [connection signal="pressed" from="BotonInicio" to="." method="_on_BotonInicio_pressed"]
 

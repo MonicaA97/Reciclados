@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://paisaje-de-primavera-de-dibujos-animados-de-fondo_399-2147490736.jpg" type="Texture" id=1]
 
 [sub_resource type="GDScript" id=1]
 
@@ -9,7 +11,33 @@ func _ready():
 
 
 func _on_btnVidrio_pressed():
-	get_tree().change_scene(\"res://PantallaJuego.tscn\")"
+	get_tree().change_scene(\"res://PantallaJuegoVidrio.tscn\")
+	
+	
+func _on_btnCarton_pressed():
+	get_tree().change_scene(\"res://PantallaJuegoCarton.tscn\")
+	
+
+func _on_btnOrganico_pressed():
+	get_tree().change_scene(\"res://PantallaJuegoOrganico.tscn\")
+	
+	
+func _on_btnPlastico_pressed():
+	get_tree().change_scene(\"res://PantallaJuegoPlastico.tscn\")
+	
+	
+func _on_btnPapel_pressed():
+	get_tree().change_scene(\"res://PantallaJuegoPapel.tscn\")
+	
+	
+func _on_btnMetal_pressed():
+	get_tree().change_scene(\"res://PantallaJuegoMetal.tscn\")
+	
+	
+	
+func _on_Button_pressed():
+	get_tree().change_scene(\"res://Incio.tscn\")
+"
 
 [node name="MenuReciclaje" type="Node"]
 
@@ -23,7 +51,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 90.0
 margin_top = 190.0
-margin_right = 158.0
+margin_right = 192.0
 margin_bottom = 210.0
 rect_scale = Vector2( 4, 4 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -40,7 +68,7 @@ group = null
 text = " Vidrio "
 flat = false
 align = 1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="btnCarton" type="Button" parent="." index="1"]
 
@@ -48,10 +76,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 610.0
-margin_top = 180.0
-margin_right = 680.0
-margin_bottom = 200.0
+margin_left = 90.0
+margin_top = 440.0
+margin_right = 192.0
+margin_bottom = 460.0
 rect_scale = Vector2( 4, 4 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -64,7 +92,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Cartón"
+text = "Papel y cartón"
 flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
@@ -77,7 +105,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 90.0
 margin_top = 310.0
-margin_right = 159.0
+margin_right = 192.0
 margin_bottom = 330.0
 rect_scale = Vector2( 4, 4 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -102,10 +130,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 620.0
-margin_top = 310.0
-margin_right = 689.0
-margin_bottom = 330.0
+margin_left = 550.0
+margin_top = 190.0
+margin_right = 652.0
+margin_bottom = 210.0
 rect_scale = Vector2( 4, 4 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -123,16 +151,16 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="btnPapel" type="Button" parent="." index="4"]
+[node name="btnMetal" type="Button" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 100.0
-margin_top = 440.0
-margin_right = 165.0
-margin_bottom = 460.0
+margin_left = 550.0
+margin_top = 310.0
+margin_right = 652.0
+margin_bottom = 330.0
 rect_scale = Vector2( 4, 4 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -145,39 +173,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Papel"
+text = "Aluminio"
 flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="btnMetal" type="Button" parent="." index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 620.0
-margin_top = 440.0
-margin_right = 688.0
-margin_bottom = 460.0
-rect_scale = Vector2( 4, 4 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Metal "
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label" type="Label" parent="." index="6"]
+[node name="Label" type="Label" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -194,14 +195,72 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Selecciona tú modo de reciclaje 
 "
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Button" type="Button" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 550.0
+margin_top = 440.0
+margin_right = 652.0
+margin_bottom = 460.0
+rect_scale = Vector2( 4, 4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Atrás"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect", "custom_colors" ]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="7"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground" index="0"]
+
+position = Vector2( 525.472, 322.895 )
+scale = Vector2( 1.76, 1.64 )
+texture = ExtResource( 1 )
 
 [connection signal="pressed" from="btnVidrio" to="." method="_on_btnVidrio_pressed"]
+
+[connection signal="pressed" from="btnCarton" to="." method="_on_btnCarton_pressed"]
+
+[connection signal="pressed" from="btnOrganico" to="." method="_on_btnOrganico_pressed"]
+
+[connection signal="pressed" from="btnPlastico" to="." method="_on_btnPlastico_pressed"]
+
+[connection signal="pressed" from="btnMetal" to="." method="_on_btnMetal_pressed"]
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 
 

@@ -1,0 +1,143 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Jugador.gd" type="Script" id=1]
+[ext_resource path="res://3-grisClaro.png" type="Texture" id=2]
+[ext_resource path="res://paisaje-de-primavera-de-dibujos-animados-de-fondo_399-2147490736.jpg" type="Texture" id=3]
+[ext_resource path="res://Timer.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 10 )
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[node name="PantallaJuego" type="Node"]
+
+[node name="PisoJuego" type="StaticBody2D" parent="." index="0"]
+
+position = Vector2( 512, 576 )
+scale = Vector2( 16, 0.5 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Color" type="ColorRect" parent="PisoJuego" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.152206, 0.671139, 0.683594, 1 )
+
+[node name="Collision" type="CollisionShape2D" parent="PisoJuego" index="1"]
+
+position = Vector2( 0, -1.90735e-06 )
+scale = Vector2( 1, 2.46154 )
+shape = SubResource( 1 )
+
+[node name="Jugador" type="KinematicBody2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 768, 496 )
+scale = Vector2( 0.766129, 1.09375 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador" index="0"]
+
+position = Vector2( 5.14984e-05, 0 )
+scale = Vector2( 3.21295, 3.51487 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Jugador/CollisionShape2D" index="0"]
+
+scale = Vector2( 0.2, 0.15 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground" index="0"]
+
+position = Vector2( 528.098, 487.144 )
+scale = Vector2( 1.76739, 1.64008 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TimerCarton" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 180.0
+one_shot = true
+autostart = true
+script = ExtResource( 4 )
+
+[node name="Regresar" type="Button" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 30.0
+margin_top = 16.0
+margin_right = 81.0
+margin_bottom = 45.0
+rect_scale = Vector2( 3, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = " Salir "
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+
