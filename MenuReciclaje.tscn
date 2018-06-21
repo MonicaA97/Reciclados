@@ -1,6 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://paisaje-de-primavera-de-dibujos-animados-de-fondo_399-2147490736.jpg" type="Texture" id=1]
+[ext_resource path="res://font/Comfortaa-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://icons/papel.png" type="Texture" id=2]
+[ext_resource path="res://icons/fragil.png" type="Texture" id=3]
+[ext_resource path="res://icons/cosecha.png" type="Texture" id=4]
+[ext_resource path="res://icons/agua.png" type="Texture" id=5]
+[ext_resource path="res://icons/lata-de-refresco.png" type="Texture" id=6]
+[ext_resource path="res://icons/hacia-atras.png" type="Texture" id=7]
+[ext_resource path="res://paisaje-de-primavera-de-dibujos-animados-de-fondo_399-2147490736.jpg" type="Texture" id=8]
 
 [sub_resource type="GDScript" id=1]
 
@@ -10,9 +17,6 @@ func _ready():
 	pass
 
 
-func _on_btnVidrio_pressed():
-	get_tree().change_scene(\"res://PantallaJuegoVidrio.tscn\")
-	
 	
 func _on_btnCarton_pressed():
 	get_tree().change_scene(\"res://PantallaJuegoCarton.tscn\")
@@ -26,10 +30,6 @@ func _on_btnPlastico_pressed():
 	get_tree().change_scene(\"res://PantallaJuegoPlastico.tscn\")
 	
 	
-func _on_btnPapel_pressed():
-	get_tree().change_scene(\"res://PantallaJuegoPapel.tscn\")
-	
-	
 func _on_btnMetal_pressed():
 	get_tree().change_scene(\"res://PantallaJuegoMetal.tscn\")
 	
@@ -37,50 +37,215 @@ func _on_btnMetal_pressed():
 	
 func _on_Button_pressed():
 	get_tree().change_scene(\"res://Incio.tscn\")
+
+
+func _on_btnVidrio_pressed():
+	get_tree().change_scene(\"res://PantallaJuegoVidrio.tscn\")
 "
+
+[sub_resource type="StyleBoxFlat" id=10]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 45
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="StyleBoxFlat" id=15]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="StyleBoxFlat" id=11]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 45
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="StyleBoxFlat" id=12]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 45
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="StyleBoxFlat" id=13]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 45
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 50
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 45
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="MenuReciclaje" type="Node"]
 
 script = SubResource( 1 )
 
-[node name="btnVidrio" type="Button" parent="." index="0"]
+[node name="btnCarton" type="Button" parent="." index="0"]
 
+modulate = Color( 0.262863, 0.388316, 0.417969, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 90.0
-margin_top = 190.0
-margin_right = 192.0
-margin_bottom = 210.0
-rect_scale = Vector2( 4, 4 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = " Vidrio "
-flat = false
-align = 1
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
-
-[node name="btnCarton" type="Button" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 90.0
+margin_left = 60.0
 margin_top = 440.0
-margin_right = 192.0
-margin_bottom = 460.0
-rect_scale = Vector2( 4, 4 )
+margin_right = 500.0
+margin_bottom = 520.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -88,26 +253,63 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Papel y cartón"
+text = "  Papel y cartón"
+icon = ExtResource( 2 )
 flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
+align = 0
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="btnVidrio" type="Button" parent="." index="1"]
+
+modulate = Color( 0.996078, 0.603922, 0, 1 )
+self_modulate = Color( 1, 0.99823, 0.886719, 1 )
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 60.0
+margin_top = 190.0
+margin_right = 500.0
+margin_bottom = 270.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 15 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.996078, 0.603922, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "  Vidrio"
+icon = ExtResource( 3 )
+flat = false
+align = 0
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="btnOrganico" type="Button" parent="." index="2"]
 
+modulate = Color( 0.195313, 1, 0, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 90.0
+margin_left = 60.0
 margin_top = 310.0
-margin_right = 192.0
-margin_bottom = 330.0
-rect_scale = Vector2( 4, 4 )
+margin_right = 500.0
+margin_bottom = 390.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -115,26 +317,30 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.192157, 1, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Orgánico"
+text = "  Orgánico"
+icon = ExtResource( 4 )
 flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
+align = 0
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="btnPlastico" type="Button" parent="." index="3"]
 
+modulate = Color( 0.197357, 0.381582, 0.871094, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 550.0
+margin_left = 530.0
 margin_top = 190.0
-margin_right = 652.0
-margin_bottom = 210.0
-rect_scale = Vector2( 4, 4 )
+margin_right = 970.0
+margin_bottom = 270.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -142,26 +348,30 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Plástico"
+text = "  Plástico"
+icon = ExtResource( 5 )
 flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
+align = 0
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="btnMetal" type="Button" parent="." index="4"]
 
+modulate = Color( 1, 0.984375, 0, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 550.0
+margin_left = 530.0
 margin_top = 310.0
-margin_right = 652.0
-margin_bottom = 330.0
-rect_scale = Vector2( 4, 4 )
+margin_right = 970.0
+margin_bottom = 390.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -169,14 +379,18 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_styles/normal = SubResource( 13 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.950885, 0.953125, 0.666443, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Aluminio"
+text = "  Aluminio"
+icon = ExtResource( 6 )
 flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
+align = 0
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="Label" type="Label" parent="." index="5"]
 
@@ -184,37 +398,38 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 200.0
-margin_top = 30.0
-margin_right = 408.0
-margin_bottom = 61.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 92.0
+margin_top = 48.0
+margin_right = 959.0
+margin_bottom = 165.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0.215686, 0.266667, 1 )
 text = "Selecciona tú modo de reciclaje 
 "
 align = 1
+valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts" ]
 
 [node name="Button" type="Button" parent="." index="6"]
 
+modulate = Color( 0, 0.952941, 1, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 550.0
+margin_left = 530.0
 margin_top = 440.0
-margin_right = 652.0
-margin_bottom = 460.0
-rect_scale = Vector2( 4, 4 )
+margin_right = 970.0
+margin_bottom = 520.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -222,14 +437,17 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.341176, 0.847059, 0.0784314, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Atrás"
+text = "  Atrás"
+icon = ExtResource( 7 )
 flat = false
-align = 1
-_sections_unfolded = [ "Rect", "custom_colors" ]
+align = 0
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="7"]
 
@@ -247,13 +465,14 @@ scroll_ignore_camera_zoom = false
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground" index="0"]
 
-position = Vector2( 525.472, 322.895 )
+position = Vector2( 532.692, 324.7 )
 scale = Vector2( 1.76, 1.64 )
-texture = ExtResource( 1 )
-
-[connection signal="pressed" from="btnVidrio" to="." method="_on_btnVidrio_pressed"]
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Visibility" ]
 
 [connection signal="pressed" from="btnCarton" to="." method="_on_btnCarton_pressed"]
+
+[connection signal="pressed" from="btnVidrio" to="." method="_on_btnVidrio_pressed"]
 
 [connection signal="pressed" from="btnOrganico" to="." method="_on_btnOrganico_pressed"]
 

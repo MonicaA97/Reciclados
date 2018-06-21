@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Jugador.gd" type="Script" id=1]
 [ext_resource path="res://3-grisClaro.png" type="Texture" id=2]
 [ext_resource path="res://paisaje-de-primavera-de-dibujos-animados-de-fondo_399-2147490736.jpg" type="Texture" id=3]
 [ext_resource path="res://Timer.gd" type="Script" id=4]
+[ext_resource path="res://font/Comfortaa-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Regresar.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -16,10 +18,19 @@ custom_solver_bias = 0.0
 radius = 10.0
 height = 20.0
 
-[node name="PantallaJuego" type="Node"]
+[sub_resource type="DynamicFont" id=3]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Settings" ]
+
+[node name="PantallaJuego" type="Node" index="0"]
 
 [node name="PisoJuego" type="StaticBody2D" parent="." index="0"]
 
+editor/display_folded = true
 position = Vector2( 512, 576 )
 scale = Vector2( 16, 0.5 )
 input_pickable = false
@@ -86,6 +97,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -115,15 +127,15 @@ script = ExtResource( 4 )
 
 [node name="Regresar" type="Button" parent="." index="4"]
 
+modulate = Color( 0, 0.976563, 1, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 30.0
-margin_top = 16.0
-margin_right = 81.0
-margin_bottom = 45.0
-rect_scale = Vector2( 3, 2 )
+margin_top = 30.0
+margin_right = 180.0
+margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -131,6 +143,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.343791, 0.847656, 0.0794678, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -138,6 +152,9 @@ group = null
 text = " Salir "
 flat = false
 align = 1
-_sections_unfolded = [ "Rect" ]
+script = ExtResource( 6 )
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors" ]
+
+[connection signal="pressed" from="Regresar" to="Regresar" method="_on_Regresar_pressed"]
 
 
