@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/aluminio2.png-bb0889931a637d3154d0dfc340ee86cf.stex"
 
 [deps]
 
-source_file="res://icon.png"
-source_md5="25805143fdd8bf230513f998db83297a"
+source_file="res://basura/aluminio2.png"
+source_md5="aa8ccdcd069c7cef9635340b549921fc"
 
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="e874ba5f224f35114e91f8e6cc5ed20f"
+dest_files=[ "res://.import/aluminio2.png-bb0889931a637d3154d0dfc340ee86cf.stex" ]
+dest_md5="f533fc182be681acb3a2841f75aee8d1"
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/vidrio1.png-eb954338551668230d9b168856a07490.stex"
 
 [deps]
 
-source_file="res://icon.png"
-source_md5="25805143fdd8bf230513f998db83297a"
+source_file="res://basura/vidrio1.png"
+source_md5="d6ac9248a962f077730b52ddcda74c89"
 
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="e874ba5f224f35114e91f8e6cc5ed20f"
+dest_files=[ "res://.import/vidrio1.png-eb954338551668230d9b168856a07490.stex" ]
+dest_md5="61e7d81771bf14e8fd35b343cdf1f2c2"
 
 [params]
 

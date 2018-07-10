@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/cancelarR.png-2bf9e857a7195146a9dbea22dcaec0f5.stex"
 
 [deps]
 
-source_file="res://icon.png"
-source_md5="25805143fdd8bf230513f998db83297a"
+source_file="res://icons/cancelarR.png"
+source_md5="62efdeb30a0e029c2e237444fdc17c67"
 
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="e874ba5f224f35114e91f8e6cc5ed20f"
+dest_files=[ "res://.import/cancelarR.png-2bf9e857a7195146a9dbea22dcaec0f5.stex" ]
+dest_md5="45d7e2703892a6edd84088237f4fb713"
 
 [params]
 

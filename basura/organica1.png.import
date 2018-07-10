@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/organica1.png-99d7f2e9d0aad9e9cd1904e2218e3445.stex"
 
 [deps]
 
-source_file="res://icon.png"
-source_md5="25805143fdd8bf230513f998db83297a"
+source_file="res://basura/organica1.png"
+source_md5="30c504ee5311380b3a993f26eb24f66d"
 
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="e874ba5f224f35114e91f8e6cc5ed20f"
+dest_files=[ "res://.import/organica1.png-99d7f2e9d0aad9e9cd1904e2218e3445.stex" ]
+dest_md5="a9e98665abcd9d15ceec23ed89b635a7"
 
 [params]
 

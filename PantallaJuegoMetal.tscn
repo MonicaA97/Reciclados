@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Jugador.gd" type="Script" id=1]
 [ext_resource path="res://3-amarillo.png" type="Texture" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://Timer.gd" type="Script" id=4]
 [ext_resource path="res://font/Comfortaa-Bold.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Regresar.gd" type="Script" id=6]
+[ext_resource path="res://Basura.gd" type="Script" id=7]
+[ext_resource path="res://basura/aluminio2.png" type="Texture" id=8]
+[ext_resource path="res://icons/cancelar.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -26,10 +29,16 @@ use_filter = false
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="PantallaJuego" type="Node" index="0"]
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30, 50 )
+
+[node name="PantallaJuego" type="Node"]
 
 [node name="PisoJuego" type="StaticBody2D" parent="." index="0"]
 
+editor/display_folded = true
 position = Vector2( 512, 576 )
 scale = Vector2( 16, 0.5 )
 input_pickable = false
@@ -67,7 +76,89 @@ position = Vector2( 0, -1.90735e-06 )
 scale = Vector2( 1, 2.46154 )
 shape = SubResource( 1 )
 
-[node name="Jugador" type="KinematicBody2D" parent="." index="1"]
+[node name="PisoJuego2" type="StaticBody2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 0, 300 )
+scale = Vector2( 0.1, 10 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Color" type="ColorRect" parent="PisoJuego2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.152206, 0.671139, 0.683594, 1 )
+
+[node name="Collision" type="CollisionShape2D" parent="PisoJuego2" index="1"]
+
+position = Vector2( 0, -1.90735e-06 )
+scale = Vector2( 1, 2.46154 )
+shape = SubResource( 1 )
+
+[node name="PisoJuego3" type="StaticBody2D" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 1030, 300 )
+scale = Vector2( 0.1, 10 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Color" type="ColorRect" parent="PisoJuego3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.152206, 0.671139, 0.683594, 1 )
+
+[node name="Collision" type="CollisionShape2D" parent="PisoJuego3" index="1"]
+
+position = Vector2( 0, -1.90735e-06 )
+scale = Vector2( 1, 2.46154 )
+shape = SubResource( 1 )
+
+[node name="Jugador" type="KinematicBody2D" parent="." index="3"]
 
 editor/display_folded = true
 position = Vector2( 768, 496 )
@@ -93,7 +184,7 @@ scale = Vector2( 0.2, 0.15 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="4"]
 
 editor/display_folded = true
 layer = -1
@@ -115,7 +206,7 @@ scale = Vector2( 1.76739, 1.64008 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="TimerMetal" type="Timer" parent="." index="3"]
+[node name="TimerMetal" type="Timer" parent="." index="5"]
 
 process_mode = 1
 wait_time = 3.0
@@ -123,7 +214,7 @@ one_shot = true
 autostart = true
 script = ExtResource( 4 )
 
-[node name="Regresar" type="Button" parent="." index="4"]
+[node name="Regresar" type="Button" parent="." index="6"]
 
 modulate = Color( 0, 0.976563, 1, 1 )
 anchor_left = 0.0
@@ -152,6 +243,44 @@ flat = false
 align = 1
 script = ExtResource( 6 )
 _sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts" ]
+
+[node name="Basura" type="KinematicBody2D" parent="." index="7"]
+
+position = Vector2( 600, 0 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="spriBas" type="Sprite" parent="Basura" index="0"]
+
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Basura" index="1"]
+
+shape = SubResource( 4 )
+
+[node name="vida1" type="Sprite" parent="." index="8"]
+
+position = Vector2( 950, 50 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="vida2" type="Sprite" parent="." index="9"]
+
+position = Vector2( 950, 150 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="vida3" type="Sprite" parent="." index="10"]
+
+position = Vector2( 950, 250 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="pressed" from="Regresar" to="Regresar" method="_on_Regresar_pressed"]
 

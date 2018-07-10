@@ -14,6 +14,16 @@ config/name="Reciclados"
 run/main_scene="res://Incio.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SMovimiento="*res://movimiento.gd"
+
+[layer_names]
+
+2d_physics/layer_1="limites"
+2d_physics/layer_2="basurero"
+2d_physics/layer_3="basura"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

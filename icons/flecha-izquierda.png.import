@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/flecha-izquierda.png-9da3ed9c99b6d8fd6009e472d30a584b.stex"
 
 [deps]
 
-source_file="res://icon.png"
-source_md5="25805143fdd8bf230513f998db83297a"
+source_file="res://icons/flecha-izquierda.png"
+source_md5="1441a74b85253314422cbe47bca71768"
 
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="e874ba5f224f35114e91f8e6cc5ed20f"
+dest_files=[ "res://.import/flecha-izquierda.png-9da3ed9c99b6d8fd6009e472d30a584b.stex" ]
+dest_md5="08b6473bc821e8fe4b3c58ae7b65e5ca"
 
 [params]
 
